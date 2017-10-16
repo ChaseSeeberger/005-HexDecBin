@@ -2,8 +2,7 @@
 public class runhere {
 
 	public static void main(String[] args) {
-		//BinPower binpower = new BinPower();
-		//binpower.setBinary();
+		
 		String base = "";
 		String baseHex = "hex";
 		
@@ -11,15 +10,14 @@ public class runhere {
 		base = baseConverter.HexDecBinBase();
 		System.out.println(base);
 		System.out.println(baseHex);
-		if(base == baseHex) {
+		if(base == "hex") {
 			System.out.println("in");
 			baseConverter.getHexNumber();
 		} else {
 			System.out.println("skip");
 		}
-		//baseConverter.convert();
-
-
 	}
-
 }
+/*BinPower binpower = new BinPower();
+binpower.setBinary(); */
+//baseConverter.convert();
