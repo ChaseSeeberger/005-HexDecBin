@@ -38,10 +38,11 @@ public class HexDecBin {
 	public void getBinNumber() {
 		message = "Enter the binary number :";
 		bin = JOptionPane.showInputDialog(message);
-		num = Integer.parseInt(bin, 10);
+		num = Integer.parseInt(bin, 2);
+		dec = Integer.toString(num);
 		hex = Integer.toHexString(num);
 		
-		message = "You have entered hex value " + hex + " Decimal vaule is: " + num + " Binary value is: " + bin;
+		message = "You have entered binary value: " + bin + " Decimal vaule is: " + dec + " hex value is: " + hex;
 		JOptionPane.showMessageDialog(null, message);
 	}
 	
@@ -52,7 +53,7 @@ public class HexDecBin {
 		hex = Integer.toHexString(num);
 		bin = Integer.toBinaryString(num);
 		
-		message = "You have entered hex value " + hex + " Decimal vaule is: " + num + " Binary value is: " + bin;
+		message = "You have entered decimal value " + dec + " hex vaule is: " + hex + " Binary value is: " + bin;
 		JOptionPane.showMessageDialog(null, message);
 	}
 	
