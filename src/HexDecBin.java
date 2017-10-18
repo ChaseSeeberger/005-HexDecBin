@@ -60,19 +60,26 @@ public class HexDecBin {
 	void convert() {
 		
 		String binary = Integer.toBinaryString(num);
+		int numberBites = binary.length();
+		int bite = 8;
+		int nibble = 4;
+		int nibbleAnswer = 4, nibbleRemainder = 0;
+		int byteAnswer = 8, byteRemainder = 0;
 		
 		message = "Binary value is: " + binary;
 		JOptionPane.showMessageDialog(null, message);
 		
-		message = "Number of bits is " + binary.length();
+		message = "Number of bits is " + numberBites;
 		JOptionPane.showMessageDialog(null, message);
 		
-		int nibbles = binary.length() / 4;
-		message = "Number of whole nibbles is " + nibbles;
-		JOptionPane.showMessageDialog(null, message);
-		
-		int bytes = binary.length() / 8;
-		message = "Number of whole bytes is " + bytes;
+
+		nibbleAnswer = numberBites/nibble;
+		nibbleRemainder = numberBites%nibble;
+		byteAnswer = numberBites/bite;
+		byteRemainder = numberBites%bite;
+		message = "Number of whole nibbles is " + nibbleAnswer + " and " + nibbleRemainder + " remainding nibbles";
+		JOptionPane.showMessageDialog(null, message); 
+		message = "Number of whole bytes is " + byteAnswer + " and " + byteRemainder + " remainding bytes";
 		JOptionPane.showMessageDialog(null, message);
 	}
 }

@@ -19,18 +19,12 @@ public class BinPower {
 		
 		System.out.println("What is your name?" );
 		name = input.nextLine();
-		System.out.println("Welcome to my program " + name + "! What Binary Base do you want?");
-		base = input.nextDouble();
+		base = 2;
 		System.out.println("What Binary Exponent do you want?");
 		exp = input.nextDouble();
-		
-		
 		System.out.println(name + ", you have entered: " + exp);
-		
-		
 		answer = (int) Math.pow(base, exp);
 		System.out.println("ans = " + answer);
-		
 	}
 
 }
