@@ -1,30 +1,54 @@
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 public class BinPower {
 
 	//Fixed Scanner bug
 	
 	Scanner input = new Scanner(System.in);
 	String name = "";
+	String message = "";
+	double exp = 0;
+	double base = 0;
+	double answer;
 	
 	public BinPower(){
 		
 	}
 	
 	public void setBinary() {
-		
-		double exp = 0;
-		double base = 0;
-		double answer;
-		
-		System.out.println("What is your name?" );
-		name = input.nextLine();
 		base = 2;
-		System.out.println("What Binary Exponent do you want?");
-		exp = input.nextDouble();
-		System.out.println(name + ", you have entered: " + exp);
+		message = "What Binary Exponent do you want?";
+		JOptionPane.showInputDialog(message);
 		answer = (int) Math.pow(base, exp);
-		System.out.println("ans = " + answer);
+		message = "ans = " + answer;
+		JOptionPane.showMessageDialog(null, message);
+	}
+	void convert() {
+		
+		String binary = Integer.toBinaryString((int) answer);
+		int numberBites = binary.length();
+		int bite = 8;
+		int nibble = 4;
+		int nibbleAnswer = 4, nibbleRemainder = 0;
+		int byteAnswer = 8, byteRemainder = 0;
+		
+		message = "Binary value is: " + binary;
+		JOptionPane.showMessageDialog(null, message);
+		
+		message = "Number of bits is " + numberBites;
+		JOptionPane.showMessageDialog(null, message);
+		
+
+		nibbleAnswer = numberBites/nibble;
+		nibbleRemainder = numberBites%nibble;
+		byteAnswer = numberBites/bite;
+		byteRemainder = numberBites%bite;
+		message = "Number of whole nibbles is " + nibbleAnswer + " and " + nibbleRemainder + " remainding nibbles";
+		JOptionPane.showMessageDialog(null, message); 
+		message = "Number of whole bytes is " + byteAnswer + " and " + byteRemainder + " remainding bytes";
+		JOptionPane.showMessageDialog(null, message);
 	}
 
 }

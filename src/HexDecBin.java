@@ -24,64 +24,60 @@ public class HexDecBin {
 		return base;
 	}
 	
-
-	public void getHexNumber() {
+	public void hexToDec() {
+		message = "Enter the hex number :";
+		hex = JOptionPane.showInputDialog(message);
+		
+		message = "You have entered hex value " + hex + " Decimal vaule is: " + num;
+		JOptionPane.showMessageDialog(null, message);
+	}
+	
+	public void hexToBin() {
 		message = "Enter the hex number :";
 		hex = JOptionPane.showInputDialog(message);
 		num = Integer.parseInt(hex, 16);
 		bin = Integer.toBinaryString(num);
-		
-		message = "You have entered hex value " + hex + " Decimal vaule is: " + num + " Binary value is: " + bin;
+		message = "You have entered hex value " + hex + " Binary value is: " + bin;
 		JOptionPane.showMessageDialog(null, message);
 	}
 	
-	public void getBinNumber() {
+	public void binToHex() {
+		message = "Enter the binary number :";
+		bin = JOptionPane.showInputDialog(message);
+		num = Integer.parseInt(bin, 2);
+		hex = Integer.toHexString(num);
+		message = "You have entered binary value: " + bin + " hex value is: " + hex;
+		JOptionPane.showMessageDialog(null, message);
+	}
+	
+	public void binToDec() {
 		message = "Enter the binary number :";
 		bin = JOptionPane.showInputDialog(message);
 		num = Integer.parseInt(bin, 2);
 		dec = Integer.toString(num);
-		hex = Integer.toHexString(num);
-		
-		message = "You have entered binary value: " + bin + " Decimal vaule is: " + dec + " hex value is: " + hex;
+		message = "You have entered binary value: " + bin + " Decimal vaule is: " + dec;
 		JOptionPane.showMessageDialog(null, message);
 	}
 	
-	public void getDecNumber() {
+	public void decToHex() {
 		message = "Enter the decimal number :";
 		dec = JOptionPane.showInputDialog(message);
 		num = Integer.parseInt(dec);
 		hex = Integer.toHexString(num);
-		bin = Integer.toBinaryString(num);
-		
-		message = "You have entered decimal value " + dec + " hex vaule is: " + hex + " Binary value is: " + bin;
+		message = "You have entered decimal value " + dec + " hex vaule is: " + hex;
 		JOptionPane.showMessageDialog(null, message);
 	}
 	
-	void convert() {
-		
-		String binary = Integer.toBinaryString(num);
-		int numberBites = binary.length();
-		int bite = 8;
-		int nibble = 4;
-		int nibbleAnswer = 4, nibbleRemainder = 0;
-		int byteAnswer = 8, byteRemainder = 0;
-		
-		message = "Binary value is: " + binary;
-		JOptionPane.showMessageDialog(null, message);
-		
-		message = "Number of bits is " + numberBites;
-		JOptionPane.showMessageDialog(null, message);
-		
-
-		nibbleAnswer = numberBites/nibble;
-		nibbleRemainder = numberBites%nibble;
-		byteAnswer = numberBites/bite;
-		byteRemainder = numberBites%bite;
-		message = "Number of whole nibbles is " + nibbleAnswer + " and " + nibbleRemainder + " remainding nibbles";
-		JOptionPane.showMessageDialog(null, message); 
-		message = "Number of whole bytes is " + byteAnswer + " and " + byteRemainder + " remainding bytes";
+	public void decToBin() {
+		message = "Enter the decimal number :";
+		dec = JOptionPane.showInputDialog(message);
+		num = Integer.parseInt(dec);
+		bin = Integer.toBinaryString(num);
+		message = "You have entered decimal value " + dec + " Binary value is: " + bin;
 		JOptionPane.showMessageDialog(null, message);
 	}
+	
+	
 }
 
 /*************************************
