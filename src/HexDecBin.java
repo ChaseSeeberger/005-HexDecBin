@@ -27,6 +27,7 @@ public class HexDecBin {
 	public void hexToDec() {
 		message = "Enter the hex number :";
 		hex = JOptionPane.showInputDialog(message);
+		num = Integer.parseInt(hex, 16);
 		
 		message = "You have entered hex value " + hex + " Decimal vaule is: " + num;
 		JOptionPane.showMessageDialog(null, message);

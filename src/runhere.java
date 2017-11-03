@@ -42,9 +42,9 @@ public class runhere {
 			}
 			
 		}
-		BinPower binpower = new BinPower();
-		binpower.setBinary(); 
-		binpower.convert();
+		//BinPower binpower = new BinPower();
+		//binpower.setBinary(); 
+		//binpower.convert();
 	}
 }
 /*
